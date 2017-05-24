@@ -1,0 +1,47 @@
+@import controllers.HomeController
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+*
+* Gutes Scala Tutorial allgemein: https://www.youtube.com/watch?v=DzFt0YkZo8M
+*@
+@(titel: String, aktuelleSeite: String)(seitenInhalt : Html)(seiten: List[String])
+
+@main(titel, aktuelleSeite){
+    @*
+    * Hier wird die MenueLeiste mit den Links erstellt als header
+    *
+    * tutorial: https://wiki.selfhtml.org/wiki/HTML/Seitenstrukturierung/header
+    *@
+
+<header>
+    @*
+    * es werden alle seiten durchgangen und die Links bis auf die Aktelle Seite erstellt
+    *
+    * tutorial: https://www.playframework.com/documentation/2.5.x/ScalaTemplates
+    *@
+
+    @for(seite <- seiten){
+        @if(aktuelleSeite.equals(seite)){
+            @*
+            * dies ist das eine nicht klickbare Bild der aktuellen Seite
+            *
+            * fuer das CSS: ueber die id zugegriffen werden, da diese im CSS mehr gewicht haben als die klassen
+            *
+            * tutorial: http://www.html-seminar.de/class_und_id.htm
+            *@
+            <div class="menueElement" id="@{seite + "bild"}"><img id="augeswaehltesElement"  src="@("assets/images/menuIcons/" + seite + "Button-sw.png")"height="40" width="40" alt="@seite" align="center" class="menueBild"></div>
+            <div class="menueText" id = "@{seite + "text"}">@{HomeController.getSeitenNamen.get(seiten.indexOf(seite))}</div>
+        } else {
+            @*
+            * dies sind die klickbaren Bilder mit den Links zu den Anderen Seiten
+            *
+            * fuer das CSS: ueber die Klasse kann zugrgriffen werden
+            *@
+            <a  href="@seite"><div class="menueElement" id="@{seite + "bild"}"><img src="@("assets/images/menuIcons/" + seite + "Button.png")"height="40" width="40"  alt="@seite" align="center" class="menueBild"></div>
+            <div class="menueText" id = "@{seite + "text"}">@{HomeController.getSeitenNamen.get(seiten.indexOf(seite))}</div></a>
+        }
+    }
+</header>
+}(seitenInhalt)

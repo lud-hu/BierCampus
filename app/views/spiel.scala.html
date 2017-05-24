@@ -1,0 +1,68 @@
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param levelName   der Name des Levels in dem sich der nutzer befindet
+*
+* All dies wird im HomeController erzeugt
+*@
+@import model.Zutat
+
+
+@(titel : String, aktuelleSeite : String, seiten : List[String], zutaten : List[Zutat], levelName: String)
+
+@menue(titel, aktuelleSeite){
+    <div id="spielfeld">
+
+        <div id="kesselUndZutaten">
+            <div id="kessel" align="center">
+                <img src="assets/images/brew-1031484.jpg">
+                <div id="levelName">Level: @levelName</div>
+                <div id="dropfield"></div>
+            </div>
+
+            <div id="zutatenbar">
+            @for(zutat <- zutaten){
+                <div class="zutaten">
+                    <div id="zutatenBild">
+                        <img src="@{"assets/images/Zutaten/" + zutat.getBild}" height="100" width="100" class="zutat" id="@{"zutat" +  {zutaten.indexOf(zutat)+1}.toString }" alt="@zutat.getName">
+                    </div>
+
+                    <div class="zutatenName" id="@{"zutat" +  {zutaten.indexOf(zutat)+1}.toString }Text">
+                        @zutat.getName
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+
+        <div id="progressBar">
+            <div id="progressBarFilling">
+                <div id="progressBarText">0%</div>
+            </div>
+        </div>
+
+        <div id="texteUnten">
+
+            <div id="info">
+                <ul id="text">Im Kessel: </ul>
+            </div>
+
+            <div id="infotext" class="quizBlock">Ziehe die Zutat einfach in den Kessel um sie zum Brauen zu verwenden!<br>Klicke auf eine Zutat um den jeweiligen Infotext zu erhalten</div>
+            <div id="spalteQuiz" class="quizBlock">
+                <div id="antwort1" class="antwort"></div>
+                <div id="antwort2" class="antwort"></div>
+            </div>
+            <div id="spalteQuiz" class="quizBlock">
+                <div id="antwort3" class="antwort"></div>
+                <div id="antwort4" class="antwort"></div>
+            </div>
+            <div id="loesung" class="quizBlock"></div>
+            <button id="naechsteFrage">Weiter</button>
+        </div>
+
+    </div>
+
+    <div id="snackbar"></div>
+
+}(seiten)

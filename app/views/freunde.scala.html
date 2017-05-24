@@ -1,0 +1,58 @@
+@import model.User
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param freunde  die Freunde die der Nutzer hat
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel: String, aktuelleSeite: String, seiten: List[String], freunde: List[User])
+
+@menue(titel, aktuelleSeite) {
+    <div id="main">
+        <div id="seitenLeiste">
+
+            @*
+            * ueberprueft ob Freunde vorhanden sind
+            *@
+            @if(freunde.isEmpty) {
+                <ul id="nachrichtenListe">
+                    <h3>Füge jetzt deinen ersten Freund hinzu!</h3>
+                </ul>
+            } else {
+                @*
+                * erstellt eine Liste der Freunde des Nutzers
+                *@
+                <div id="freunde">
+                    <ul id="nachrichtenListe">
+                        <h2 id="listenUeberschrift">Deine Freunde:</h2>
+                        @for(freund <- freunde) {
+                            <a class="tooltipFreunde" href="#" id="@freund.getUserID" onclick="zeigeFreundesProfilAn(this.id)">
+                              <li>
+                                <div id="freundprofil">
+                                        @freund.getName
+                                    <span class="tooltiptextFreunde"> Klicke auf einen Freund in deiner Freundesliste um dir sein Profil anzusehen!</span>
+
+                                </div>
+
+                              </li>
+                            </a>
+                        }
+                    </ul>
+                </div>
+            }
+            <div id="freundeHinzufuegen">
+                <input type="button" id="freundeHinzufuegenButton"onclick="neueFreundeFinden()" value="Freund hinzufügen"/>
+            </div>
+        </div>
+        @*
+        * Beim laden der Seite wird dieser Text zu Hilfestellung angezeigt
+        *@
+
+        <div id="freundeContent">
+            <div id="angezeigterFreund"></div>
+            <div id="freundeHinzufuegenForm"></div>
+        </div>
+    </div>
+}(seiten)

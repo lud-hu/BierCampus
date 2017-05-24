@@ -1,0 +1,18 @@
+@import model.User
+
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param highscore   die nach Promillezahl absteigend geordnete Liste mit den maximal zehn besten Spielern
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel : String, seiten : List[String], message: String)
+
+@menue(titel, "infomeldung"){
+
+    <div id="main">
+        <h1>@message</h1>
+    </div>
+}(seiten)

@@ -1,0 +1,46 @@
+@*
+* Dieses Template erstellt eine HTML-Seite mit einem Login-Form, in das der Nutzer seine Daten eintragen kann
+*@
+
+@(form: Form[HomeController.Login])
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>BierCampus2</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/TabBild.png")">
+        @*
+        * hier wird das jquery eingebunden
+        *@
+        <script src="assets/javascripts/jquery-3.1.1.min.js"></script>
+        @*
+        * hier wird das javaScript der Seite eingebunden
+        *@
+        <script src="@("assets/javascripts/login.js")" type="text/javascript"></script>
+        @*
+        * hier wird das CSS der Seite eingebunden
+        *@
+        <link rel="stylesheet" media="screen" href="@("assets/stylesheets/login.css")">
+    </head>
+    <body>
+        <div class="main">
+            <h1>Willkommen bei BierCampus2!</h1>
+
+            @helper.form(routes.HomeController.authenticate) {
+                <h2>Melde dich hier an:</h2>
+
+                <p>
+                    <input type="text" name="email" placeholder="E-Mail" value="@form("username").value">
+                </p>
+                <p>
+                    <input type="password" name="password" placeholder="Passwort">
+                </p>
+                <p>
+                    <button type="submit" id="login">Login</button>
+                </p>
+            }
+            <br>
+            <h3>Noch keinen Nutzerkonto?</h3>
+            <button type="button" id="register" onclick="location.href = 'register'">Registrieren</button>
+        </div>
+    </body>
+</html>

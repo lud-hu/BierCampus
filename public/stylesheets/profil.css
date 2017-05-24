@@ -1,0 +1,92 @@
+html{
+    background-image: url(../images/cornfield2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2{
+    color: white;
+    font-weight: bold;
+    font-size: 150%;
+    font-family: sans-serif;
+}
+
+h3 {
+    color: ivory;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#abzeichen {
+}
+
+th, td {
+    /*padding: 5%;*/
+    opacity: 0.93;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table {
+    background-color: rgba(78, 78, 78, 0.51);
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+    color: ivory;
+}
+
+tr:nth-child(even){
+}
+
+tr:nth-child(odd){
+}
+
+
+#abzeichenAuswahl{
+    clear: both;
+
+}
+
+#daten{
+}
+
+.auswaehlbaresAbzeichen{
+    height: 90px;
+}
+
+.tooltip{
+    color: ivory;
+}
+
+td a {
+     display: block;
+     padding: 25px;
+ }
+
+.tooltip span {
+    display: none;
+    color: #000;
+    text-decoration: none;
+    padding: 3px;
+    z-index: 1;
+}
+
+.tooltip:hover span {
+    display: block;
+    position: absolute;
+    width: 335px;
+    height: 62px;
+    background-color: rgba(78, 78, 78, 0.92);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    margin-left: -25px;
+    margin-top: -47px;
+    z-index: 166;
+    font-size: 14px;
+}
+
+#krug{
+    vertical-align: inherit;
+}

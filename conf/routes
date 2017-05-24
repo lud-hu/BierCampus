@@ -1,0 +1,56 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#verlinkt den public Ordner mit den statischen Elementden
+GET  /assets/*file                          controllers.Assets.versioned(path="/public", file: Asset)
+
+
+#Hier kommen alle Routes fuer den HomeController rein also die Ursprungsseiten, mit PageReload, keine AJAX aufrufen
+#Die Seiten zu einloggen und registrieren
+GET     /                                   controllers.HomeController.login
+GET     /register                           controllers.HomeController.register
+#Die eigentlichen Seiten mit eingeloggtem User die im Menue angezeigt werden
+GET     /biergewinnt                        controllers.HomeController.bierGewinnt
+GET     /freunde                            controllers.HomeController.freunde
+GET     /highscore                          controllers.HomeController.highscore
+GET     /nachrichten                        controllers.HomeController.nachrichten
+GET     /profil                             controllers.HomeController.profil
+GET     /spiel                              controllers.HomeController.spiel
+GET     /logout                             controllers.HomeController.logout
+GET     /infomeldung                        controllers.HomeController.infomeldung(titel: String, message: String)
+
+
+
+POST    /login                              controllers.HomeController.authenticate
+POST    /register                           controllers.HomeController.registrieren
+
+
+#Hier kommen alle AJAX-Routes fuer den BiergewinntController rein
+POST    /bierGewinnt/speicherErfahrung      controllers.BierGewinntController.speicherErfahrung
+GET     /bierGewinnt/bekommeAbzeichen       controllers.BierGewinntController.bekommeAbzeichen
+GET     /bierGewinnt/bekommeSpielername     controllers.BierGewinntController.bekommeSpielername
+
+#Hier kommen alle AJAX-Routes fuer den FreundeController rein
+GET     /freunde/zeigeProfilAn              controllers.FreundeController.zeigeProfilAn
+GET     /freunde/freundeSuche               controllers.FreundeController.sucheFreunde
+GET     /freunde/fuegeFreundHinzu           controllers.FreundeController.fuegeFreundHinzu
+
+#Hier kommen alle AJAX-Routes fuer den HighscoreController rein
+#braucht kein AJAX bis jetzt, praise da lord
+
+#Hier kommen alle AJAX-Routes fuer den MenueController rein
+#braucht kein AJAX bis jetzt, praise da lord
+
+#Hier kommen alle AJAX-Routes fuer den NachrichtenController rein
+GET     /nachrichten/nachrichtSchreiben     controllers.HomeController.nachrichtForm
+POST    /nachrichten/nachrichtAbsenden      controllers.HomeController.nachrichtAbsenden
+GET     /nachrichten/nachrichtLesen         controllers.NachrichtenController.nachrichtLesen
+
+#Hier kommen alle AJAX-Routes fuer den ProfilController rein
+GET     /profil/abzeichenWaehlen/:id        controllers.ProfilController.speichereAbzeichen(id: Integer)
+
+#Hier kommen alle AJAX-Routes fuer den SpielController rein
+GET     /spiel/bekommeReihenfolge           controllers.SpielController.bekommeReihenfolge
+POST    /spiel/checkeAntwort                controllers.SpielController.checkeAntwort
+GET    /spiel/speicherErfahrung             controllers.SpielController.speicherErfahrung

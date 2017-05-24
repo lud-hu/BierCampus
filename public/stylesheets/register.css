@@ -1,0 +1,37 @@
+a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: coral;
+    font-weight: bold;
+}
+
+#register {
+    width: 162px;
+    height: 35px;
+    background-color: transparent;
+    visibility: visible;
+    color: ivory;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: sans-serif;
+    border: 1px solid ivory;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#register:hover {
+    background-color: #aaaaaa;
+    border: 2px solid ivory;
+}
+
+.main{
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    width: 60%;
+    background-color: rgba(78, 78, 78, 0.31);
+}

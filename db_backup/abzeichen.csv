@@ -1,0 +1,5 @@
+abzeichen_id,name,beschreibung,bild
+1,Einstiegsdroge,"Du hast das Einführungslevel bestanden. Glückwunsch!",abzeichenEinstiegsdroge.png
+2,Pils,Pilsbescheribung,abzeichenPils.png
+3,Kellerbier,Kellerbeschreibung,abzeichenKellerbier.png
+4,Weizen,Weizenbierbescreibung,abzeichenWeizen.png

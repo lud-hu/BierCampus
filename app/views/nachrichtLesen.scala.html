@@ -1,0 +1,18 @@
+@import model.Nachricht
+@import model.User
+
+@*
+* 'nachricht' die aus der Datenabnk geladene Nachricht
+*@
+@(nachricht: Nachricht)
+
+<div id="absender">
+    @*
+    * leadt den Absender aus der Datenbank aus, und liesst dessen Namen aus
+    *@
+        von: @User.find.byId(nachricht.getAbsender).getName
+</div>
+<div id="nachrichtenInhalt">
+    @nachricht.getInhalt
+
+</div>

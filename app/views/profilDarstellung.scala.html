@@ -1,0 +1,33 @@
+@import model.User
+@*
+*  'ausgewaehlterNutzer' der Nutzer dessen Profil angezeigt werden soll
+*@
+@(ausgewaehlterNutzer: User)
+    <div id="daten">
+        <table align="center">
+            <tr>
+                <td><a class="tooltip">Name:<span>Dein Benutzername.</span></a></td><td>@ausgewaehlterNutzer.getName</td>
+            </tr>
+            <tr>
+                <td><a class="tooltip">Level:<span>Das höchste Level, das du bisher bestanden hast.
+                    Gehe zum Hauptspiel um weiterzuspielen!</span></a></td><td>@ausgewaehlterNutzer.getBestandenesLevel.getLevelName</td>
+            </tr>
+            <tr>
+                <td><a class="tooltip">Erfahrung:<span>So viele Erfahrungspunkte hast du schon gesammelt!
+                    Spiele neue Level oder spiele Bier Gewinnt, um noch mehr Punkte zu sammeln.</span></a></td><td>@ausgewaehlterNutzer.getErfahrung XP</td>
+            </tr>
+            <tr>
+                <td><a class="tooltip">Promille:<span>Dein aktueller Promillestand!
+                Erhöhe ihn, indem du das Hauptspiel oder Bier Gewinnt spielst.
+                    Wenn du zulange nicht spielst, verringert sich der Wert.</span></a></td><td>@ausgewaehlterNutzer.getPromille‰<img id="krug" height="67" width="67" src="@{"assets/images/Promillestufe" + ausgewaehlterNutzer.getFirstDigitOfPromille + ".png"}"></td>
+            </tr>
+            <tr>
+                <td><a class="tooltip">Rang:<span>Dein aktueller Rang (abhängig von deinen Erfahrungspunkten).
+                Vergleiche ihn im Highscore mit anderen!</span></a></td><td>@ausgewaehlterNutzer.getRang.getBezeichnung<td>
+            </tr>
+            <tr>
+                <td><a class="tooltip">Abzeichen:<span>Dein aktuelles Abzeichen. Schalte Level frei,
+                    um mehr Auswahlmöglichkeit bei den Abzeichen zu haben.</span></a></td><td><img id="abzeichen" height="60" width="60" src="@{"assets/images/" + ausgewaehlterNutzer.getGewaehltesAbzeichen.getBild}"></td>
+            </tr>
+            </table>
+    </div>

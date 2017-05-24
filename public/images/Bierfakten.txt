@@ -1,0 +1,29 @@
+Obergärige Biere (Gärtemperatur 15-30°C):
+
+Ale Biere
+Altbier
+Berliner Weisse
+Dinkelbier
+Gose
+Haferbier
+Kölsch
+Porter
+Roggenbier
+Saison
+Stout
+Weizenbier
+
+
+Untergärige Biere (Gärtemperatur unter 12°C):
+
+Export
+Helles
+Lager
+Märzen
+Münchner Dunkel
+Pils
+Rotbier
+Schwarzbier
+Zoigl
+
+Zutaten: Wasser (90%), Malz, Hopfen und Hefe

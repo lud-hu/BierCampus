@@ -1,0 +1,74 @@
+@import java.util
+
+@import model.{Nachricht, User}
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param nachrichten  alle Nachrichten die der Nutzder bis jetzt erhalten hat
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel: String, aktuelleSeite: String, seiten: List[String], nachrichten: util.Collection[Nachricht])
+
+@menue(titel, aktuelleSeite) {
+    @*
+    * hier wird die Seitenleiste erstellt
+    *@
+    <div id="main">
+        <div id="seitenLeiste">
+
+            <div id="nachrichtenLeiste">
+                @*
+                * checkt ob es ueberhaupt Nachrichten zum anzeigen gibt
+                *@
+                @if(nachrichten.isEmpty) {
+                    <ul id="nachrichtenListe">
+                    <h3>Bisher hast du keine Nachrichten erhalten.</h3>
+                    </ul>
+                } else {
+                    @*
+                    * Erstellt Liste von den eingeganenen Nachrichten, wenn vorhanden
+                    *@
+                    <ul id="nachrichtenListe">
+                        <h2 id="listenUeberschrift">Deine Nachrichten:</h2>
+                    @for(nachricht <- nachrichten) {
+                        <a class="tooltip" href="#" id="@nachricht.getNachrichtenId" onclick="zeigeNachrichtAn(this.id)">
+                            <li class="nachrichtenStatus">
+
+                                Absender: @User.find.byId(nachricht.getAbsender).getName <br>
+                                @*
+                                * markiert Nachrichten als gelsesen oder ungelsen
+                                *@
+                                Status:
+                                @if(nachricht.isGelesen) {
+                                    gelesen
+                                } else {
+                                    ungelesen
+                            }
+                            <span class="tooltiptext">Klicke auf eine Nachricht, um sie dir anzeigen zu lassen!</span>
+
+                        </li>
+                    </a>
+                    }
+                    </ul>
+                }
+
+            </div>
+            <div id="nachrichtSchreiben">
+                <input type="button" id="nachrichtSchreibenButton" onclick="schreibeNachricht()" value="Nachricht schreiben"/>
+            </div>
+        </div>
+        @*
+        * Hier wird der Nachrichtenteil erstellt, der default ist das schreiben einer Nachricht, das ueber jquery geladen wird
+        *@
+        <div id="nachrichtenContent">
+            <div id="nachrichtenAnzeige">
+            </div>
+            <div id="nachrichtSchreibenForm">
+
+            </div>
+        </div>
+
+    </div>
+}(seiten)

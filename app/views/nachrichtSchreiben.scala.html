@@ -1,0 +1,21 @@
+@*
+* Dieses Template ist fuer ein HTML-Snippet in das ein Form bereitsetllt, in dem der Nutzer seine Nachrichten eintraegt
+*@
+
+@(form : Form[HomeController.NutzerNachricht])
+
+@helper.form(routes.HomeController.nachrichtAbsenden()){
+    <div id="nachrichtSchreiben">
+    <p>
+        An:<br>
+        <input id="empfaengerTextfield" type="text" name="empfaenger" placeholder="Empfänger" value="@form("empfaenger").value">
+    </p>
+    <p>
+        Text:<br>
+            <textarea id="nachrichtenTextfield" type="text" name="inhalt" placeholder="Deine Nachricht..." value="@form("inhalt").value"></textarea>
+    </p>
+    <p>
+        <button id="abschickenButton" type="submit">Abschicken</button>
+    </p>
+    </div>
+}

@@ -1,0 +1,227 @@
+#spielfeld {
+    /*padding-top: 50px;
+    width: 60%;
+    margin: auto;*/
+    width: 1024px;
+    margin: auto;
+    padding-top: 20px;
+
+}
+
+#linkeSpalte{
+    float: left;
+    width: 40%;
+    height: 498px;
+    text-align: center;
+
+    background-color: rgba(78, 78, 78, 0.31);
+}
+
+#rechteSpalte{
+    float: right;
+    height: 465px;
+    width: 60%;
+    text-align: center;
+    padding-top: 33px;
+
+    background-color: rgba(78, 78, 78, 0.31);
+}
+
+#bier{
+    border: 0px solid black;
+    visibility: hidden;
+    margin: auto;
+}
+
+
+#bier .bier-highlight {
+    background-color: red;
+}
+#bier td {
+    border: 1px solid black;
+
+}
+#bier, #bier tr, #bier tr td {
+    padding: 0px;
+}
+
+body {
+    background-image: url(../images/cornfield2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: ivory;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+a {
+    color:lightgrey;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: ivory;
+}
+
+h1 {
+    color: ivory;
+    font-weight: bold;
+    font-size: 250%;
+    font-family: sans-serif;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:none;
+    border-radius: 0;
+    font-size: 1em;
+    width: 100%;
+    visiblility: visible;
+}
+
+select {
+    width: 160px;
+    height: 30px;
+    background-color: ivory;
+    color:black;
+    border-top:1px solid #444;
+    padding:.3em 1em .3em 1em;
+    border-radius: 2px;
+}
+
+
+
+
+option {
+    background: lightgrey;
+    border-top:1px solid ivory;
+    padding:.3em 1em .3em 1em;
+    border-radius: 2px;
+}
+
+
+
+#werBeginnt {
+    background-color: transparent;
+    margin-top: 2%;
+    visibility: visible;
+    font-weight: bold;
+    font-size: 150%;
+    color: ivory;
+    font-family: sans-serif;
+
+
+}
+
+#level {
+    margin-top: 4%;
+    visibility: visible;
+    font-weight: bold;
+    font-size: 150%;
+    color: ivory;
+    font-family: sans-serif;
+}
+
+#start {
+    width: 162px;
+    height: 35px;
+    margin-top: 4%;
+    background-color: transparent;
+    visibility: visible;
+    color: ivory;
+    font-weight: bold;
+    font-size: 130%;
+    font-family: sans-serif;
+}
+
+#start:hover {
+    background-color: #aaaaaa;
+    border: 2px solid ivory;
+}
+
+
+#neustart {
+
+    width: 200px;
+    height: 35px;
+
+    margin-top: 25px;
+
+    background-color: transparent;
+    visibility: hidden;
+    color: ivory;
+    font-weight: bold;
+    font-size: 130%;
+    font-family: sans-serif;
+
+}
+
+#neustart:hover {
+    background-color: #aaaaaa;
+    border: 2px solid ivory;
+}
+
+button {
+
+    font-size: 18px;
+    font-family: FreeSans;
+    border: 1px solid ivory;
+    text-align: center;
+    border-radius: 2px;
+
+
+}
+
+/*
+Code aus dem Tutorial von w3schools
+https://www.w3schools.com/howto/howto_js_snackbar.asp
+ */
+/* The snackbar - position it at the top and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 992px; /* Set a default minimum width */
+    margin-left: -511px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    top: 9%; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 4.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 5.5%; opacity: 0;}
+    to {top: 9%; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 5.5%; opacity: 0;}
+    to {top: 9%; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 9%; opacity: 1;}
+    to {top: 5.5%; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 9%; opacity: 1;}
+    to {top: 5.5%; opacity: 0;}
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="548.5925925925926" y="36.0">model.Schritt</node>
+    <node x="921.0" y="166.0">model.Level</node>
+    <node x="693.0" y="190.0">model.Rang</node>
+    <node x="1040.25" y="0.0">model.Abzeichen</node>
+    <node x="737.0925925925926" y="356.0">model.User</node>
+    <node x="459.00000000000006" y="190.0">model.Zutat</node>
+    <node x="0.0" y="166.0">model.Nachricht</node>
+    <node x="221.00000000000006" y="154.0">model.QuizFrage</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.User" target="model.Nachricht">
+      <point x="-120.75" y="-148.0" />
+      <point x="777.3425925925926" y="336.0" />
+      <point x="100.5" y="336.0" />
+      <point x="0.0" y="64.0" />
+    </edge>
+    <edge source="model.Level" target="model.Schritt">
+      <point x="-58.0" y="-64.0" />
+      <point x="979.0" y="134.0" />
+      <point x="615.2592592592594" y="134.0" />
+      <point x="26.666666666666686" y="16.0" />
+    </edge>
+    <edge source="model.Level" target="model.Abzeichen">
+      <point x="58.0" y="-64.0" />
+      <point x="1095.0" y="134.0" />
+      <point x="1084.75" y="134.0" />
+      <point x="-44.5" y="52.0" />
+    </edge>
+    <edge source="model.User" target="model.Abzeichen">
+      <point x="120.74999999999997" y="-148.0" />
+      <point x="1018.8425925925926" y="336.0" />
+      <point x="1163.5" y="336.0" />
+      <point x="1163.5" y="134.0" />
+      <point x="1173.75" y="134.0" />
+      <point x="44.5" y="52.0" />
+    </edge>
+    <edge source="model.QuizFrage" target="model.Schritt">
+      <point x="0.0" y="-76.0" />
+      <point x="330.00000000000006" y="124.0" />
+      <point x="561.925925925926" y="124.0" />
+      <point x="-26.666666666666657" y="16.0" />
+    </edge>
+    <edge source="model.User" target="model.Level">
+      <point x="40.25" y="-148.0" />
+      <point x="938.3425925925926" y="326.0" />
+      <point x="1037.0" y="326.0" />
+      <point x="0.0" y="64.0" />
+    </edge>
+    <edge source="model.User" target="model.Rang">
+      <point x="-40.25" y="-148.0" />
+      <point x="857.8425925925926" y="336.0" />
+      <point x="797.0" y="336.0" />
+      <point x="0.0" y="40.0" />
+    </edge>
+    <edge source="model.Zutat" target="model.Schritt">
+      <point x="0.0" y="-40.0" />
+      <point x="566.0" y="134.0" />
+      <point x="588.5925925925926" y="134.0" />
+      <point x="0.0" y="16.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="610.0" y="366.0" />
+  <SelectedNodes>
+    <node>model.Schritt</node>
+    <node>model.Abzeichen</node>
+    <node>model.Zutat</node>
+    <node>model.Nachricht</node>
+    <node>model.Level</node>
+    <node>model.User</node>
+    <node>model.Rang</node>
+    <node>model.QuizFrage</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

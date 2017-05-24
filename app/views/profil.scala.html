@@ -1,0 +1,32 @@
+@import model.{Abzeichen, User}
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param waehlbareAbzeichen   eine Liste aller Abzeichen, die eingeloggte Nutzer auswaehlen kann
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel: String, aktuelleSeite: String, seiten: List[String], eingeloggterNuztzer: User, waehlbareAbzeichen: List[Abzeichen])
+
+    @menue(titel, aktuelleSeite) {
+        <div id="profilanzeige" align="center">
+            <h2>Dein Profil:</h2>
+            <h4>Fahre mit der Maus über die Kategorien, um mehr zu erfahren.</h4>
+            @profilDarstellung(eingeloggterNuztzer)
+        </div>
+
+        <div id = "abzeichenAuswahl" align="center">
+            @if(waehlbareAbzeichen.size >0){
+            <h3>Wähle dein Abzeichen per Mausklick aus:</h3>
+            @for(abzeichen <- waehlbareAbzeichen) {
+                <a href="@{
+                    "/profil/abzeichenWaehlen/" + abzeichen.getAbzeichenId
+                }" ><img src="@{
+                    "assets/images/" + abzeichen.getBild
+                }" class="auswaehlbaresAbzeichen" height="90" width="90">
+                </a>
+            }
+            }
+        </div>
+    }(seiten)

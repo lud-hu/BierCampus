@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    background-image: url(../images/cornfield2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    /*color: ivory;
+    font-weight: bold;*/
+}
+
+#main{
+    width: 1020px;
+    margin: 5px;
+    margin: auto;
+}
+
+h3{
+    color: ivory;
+    width: 250px;
+}
+
+#seitenLeiste {
+    width: 29%;
+    overflow: hidden;
+    float: left;
+}
+
+#listenUeberschrift {
+    font-size: 130%;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+
+#nachrichtenListe {
+    width: 106%;
+    font-weight: bold;
+    height: 450px;
+    text-align: left;
+    overflow: auto;
+    float: left;
+    list-style-type: none;
+    background-color: rgba(78, 78, 78, 0.60);
+    line-height: 1.2;
+}
+
+
+li {
+    width: 200px;
+    height: 35px;
+    margin-top: 4%;
+    background-color:transparent;
+    font-weight: bold;
+    font-size: 130%;
+    font-family: sans-serif;
+    padding-top: 7px;
+    text-align: center;
+    list-style-type: none;
+    border: 1px solid ivory;
+    border-radius: 4px;
+}
+
+li:hover {
+    background-color: #aaaaaa;
+    border: 1px solid ivory;
+}
+
+#freundeHinzufuegenButton, #freundHinzufuegenButton {
+    float: left;
+    width: 100%;
+    height: 35px;
+    background-color: transparent;
+    visibility: visible;
+    color: ivory;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: sans-serif;
+    border: 1px solid ivory;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#freundeHinzufuegenButton:hover, #freundHinzufuegenButton:hover{
+    background-color: #aaaaaa;
+    border: 2px solid ivory;
+}
+
+#freundHinzufuegenButton{
+    width: 50%;
+    margin-left: 15px;
+    margin-top: 30%;
+}
+
+#freundeContent{
+    float: right;
+    width: 70%;
+    height: 501px;
+
+    background-color: rgba(78, 78, 78, 0.60);
+    margin-top: 16px;
+
+    color: ivory;
+}
+
+#freundeHinzufuegenForm{
+    text-align: left;
+    padding-left:35px;
+    padding-right: 35px;
+    padding-top: 20px;
+}
+
+#freundeDropDown{
+    width: 30%;
+    height: 35px;
+    float: left;
+    background-color: transparent;
+    visibility: visible;
+    color: ivory;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: sans-serif;
+    border: 1px solid ivory;
+    text-align: center;
+    border-radius: 2px;
+    margin-top: 30%;
+    margin-left: 8%;
+}
+
+#dropDownListItem{
+    color: black;
+}
+
+#freunde {
+    float: left;
+
+}
+
+.tooltipFreunde {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipFreunde .tooltiptextFreunde {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(78, 78, 78, 0.92);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.tooltipFreunde .tooltiptextFreunde::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltipFreunde:hover .tooltiptextFreunde {
+    font-size: 11px;
+    visibility: visible;
+}
+
+th, td {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 600px;
+    text-align: center;
+    border-collapse: collapse;
+    color: ivory;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+tr:nth-child(even){
+
+}
+
+tr:nth-child(odd){
+}
+
+.tooltip{
+    color: ivory;
+}
+
+td a {
+    display: block;
+    padding: 25px;
+}
+
+.tooltip span {
+    display: none;
+    color: #000;
+    text-decoration: none;
+    padding: 3px;
+    z-index: 1;
+}
+
+.tooltip:hover span {
+
+}
+
+#krug{
+    vertical-align: inherit;
+}

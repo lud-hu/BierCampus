@@ -1,0 +1,74 @@
+html{
+    background-image: url(../images/brew-1031484.jpg);
+    background-size: cover;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main{
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    width: 60%;
+    background-color: rgba(78, 78, 78, 0.31);
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 35px;
+    border-radius: 7px;
+    border:0px;
+    font-size: 18px;
+    background-color: ivory;
+    padding-left: 20px;
+}
+
+#login, #register {
+    width: 162px;
+    height: 35px;
+    background-color: transparent;
+    visibility: visible;
+    color: ivory;
+    font-weight: bold;
+    font-size: 110%;
+    font-family: sans-serif;
+    border: 1px solid ivory;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#login:hover, #register:hover {
+    background-color: #aaaaaa;
+    border: 2px solid ivory;
+}
+
+h1 {
+
+    border: 0px solid black;
+    padding: 10px;
+    text-align: center;
+
+    color: ivory;
+    font-family: sans-serif;
+    font-size: 250%;
+}
+
+h2 {
+    color: ivory;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h3 {
+    color: ivory;
+    font-family: sans-serif;
+    text-align: center;
+}

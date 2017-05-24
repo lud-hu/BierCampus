@@ -1,0 +1,18 @@
+body {
+    background-image: url(../images/cornfield2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    color: ivory;
+    text-align: center;
+}
+
+#main{
+    background-color: rgba(78, 78, 78, 0.31);
+    width: 1020px;
+    margin: auto;
+    padding: 25px;
+    margin-top: 20px;
+}

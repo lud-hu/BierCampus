@@ -1,0 +1,39 @@
+@import model.User
+
+@*
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param highscore   die nach Promillezahl absteigend geordnete Liste mit den maximal zehn besten Spielern
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel : String, aktuelleSeite : String, seiten : List[String], highscore: List[User])
+
+@menue(titel, aktuelleSeite){
+    @*
+    * erstellt eine Tabelle mit dem Highscore
+    *@
+
+        <table align="center">
+            <tr class="tabellenReihe">
+                <th class="tabellenUeberschrift" id="rangUeberschrift">Platz:</th>
+                <th class="tabellenUeberschrift" id="nameUeberschrift">Name:</th>
+                <th class="tabellenUeberschrift" id="erfahrungUeberschrift">Erfahrung:</th>
+                <th class="tabellenUeberschrift" id="levelUeberschrift">Level:</th>
+                <th class="tabellenUeberschrift" id="rangUeberschrift">Rang:</th>
+                <th class="tabellenUeberschrift" id="abzeichenUberschrift">Abzeichen:</th>
+            </tr>
+            @for(spieler <- highscore) {
+                <tr class="tabellenReihe">
+                    <td class="tabellenElement" id="nummer">@{highscore.indexOf(spieler) + 1}</td>
+                    <td class="tabellenElement" id="spielername">@spieler.getName</td>
+                    <td class="tabellenElement" id="spielererfahrung">@spieler.getErfahrung</td>
+                    <td class="tabellenElement" id="spielerlevel">@spieler.getBestandenesLevel.getLevelName</td>
+                    <td class="tabellenElement" id="spielerrang">@spieler.getRang.getBezeichnung</td>
+                    <td class="tabellenElement"><img height="70" width="70" src="@{"assets/images/" + spieler.getGewaehltesAbzeichen.getBild}"></td>
+                </tr>
+            }
+        </table>
+
+}(seiten)

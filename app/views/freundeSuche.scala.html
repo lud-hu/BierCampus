@@ -1,0 +1,24 @@
+@import model.User
+
+@*
+* Template fuer ein HTML-Snippet, dass Auswahl der Freunde ermoeglicht
+*
+*  @param nichtFreunde    eine Liste der Nutzer die noch als Freund hinzugefuegt werden koennen
+*@
+
+@(nichtFreunde : List[User])
+
+@*
+* tutorial hierfür: https://www.w3schools.com/html/html_form_elements.asp
+*@
+
+Tippe den Anfangsbuchstben des Namens ein, um einen Nutzer zu suchen.
+
+<form action="/freunde/fuegeFreundHinzu">
+    <select id="freundeDropDown" name="nutzerID">
+        @for(nutzer <- nichtFreunde) {
+            <option id="dropDownListItem" value="@nutzer.getUserID">@nutzer.getName</option>
+        }
+    </select>
+    <input id="freundHinzufuegenButton" type="submit" value = "als Freund hinzufügen">
+</form>

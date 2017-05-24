@@ -1,0 +1,79 @@
+@**
+* @param titel   der title der HTML-Seite, der im Tab oben angezeigt wird
+* @param aktuelleSeite   dieses Argument definiert die Scala.html Datei, auf der sich der User gerade befindet
+* @param seiten   alle ueber das Menue erreichbaren Seiten befinden sich in dieser Liste
+* @param groesse   die Spielgeldgroesse aus der das Spielfeld generiert wird
+*
+* All dies wird im HomeController erzeugt
+*@
+@(titel: String, aktuelleSeite: String, seiten: List[String], groesseSpalte: Int, groesseZeile: Int)
+
+    @menue(titel, aktuelleSeite) {
+        @*
+        * hier kann das HTML der Seite hingecodet werden
+        *@
+        <body>
+            <div id="spielfeld">
+                <div id="linkeSpalte">
+                    <h1>BIER GEWINNT!</h1>
+
+                        <table id= "buttons">
+
+                            <div class="button1" id="button1">
+
+                                <tr>
+                                    <h3 id="werBeginnt">Wer beginnt?</h3>
+
+                                    <input type="Radio" name="select1" value="mStart" id="mStart" checked="checked" /> Mensch
+                                    <input type="Radio" name="select1" value="kiStart" id="kiStart"/> Maschine
+                                </tr>
+                            </div>
+                            <div class="button2" id="button2">
+                                <tr>
+                                    <h3 id="level">Schwierigkeit?</h3>
+
+                                    <input type="Radio" name="select2" value="leicht" id="leicht" checked="checked" /> leicht
+                                    <input type="Radio" name="select2" value="schwer" id="schwer"/> schwer
+                                </tr>
+
+                            </div>
+                        </table>
+
+                            <!-- Muss noch mit Css gestaltet werden -->
+                        <br/>
+
+
+                        <div class="start">
+
+                            <button id="start" >Start!</button>
+                        </div>
+
+                    </div>
+
+                    <div id="rechteSpalte">
+                        <table id="bier">
+                        @for(zeile <- 0 until {
+                            groesseZeile - 1
+                        }) {
+                            <tr>
+                            @for(spalte <- 0 until {
+                                groesseSpalte - 1
+                            }) {
+                                <td class="@("spalte" + spalte.toString)">
+                                    <img src="assets/images/bierOhne.png" height="50" width="50">
+                                </td>
+                            }
+                            </tr>
+                        }
+                        </table>
+                        <button id="neustart"">Neues Spiel!</button>
+                    </div>
+
+
+                </div>
+                <!--Toast Meldung-->
+                <div id="snackbar"></div>
+
+
+        </body>
+    }(seiten)

@@ -1,0 +1,63 @@
+
+a {
+    color:lightgrey;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: ivory;
+}
+
+body {
+    background-image: url(../images/cornfield2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+table {
+    margin-top: 20px;
+
+}
+
+
+table, th, td {
+    background-color: rgba(78, 78, 78, 0.31);
+    border:0px solid black;
+    border-collapse: collapse;
+    color: ivory;
+}
+
+th{
+    height: 30px;
+    background-color: rgba(78, 78, 78, 0.58);
+    color: white;
+}
+th, td {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 6px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration-color: honeydew;
+}
+
+td {
+}
+
+
+tr:nth-child(even){
+    background-color: rgba(78, 78, 78, 0.31)
+
+}
+
+tr:nth-child(odd){
+    background-color: rgba(78, 78, 78, 0.31)
+}
+
+
+
+
+

@@ -1,0 +1,13 @@
+rang_id,bezeichnung,xp_grenze
+0,Neueinsteiger,0
+1,Bierjüngling,10
+2,Bierschüler,20
+3,"trinkfester Student",30
+4,Hobbybrauer,40
+5,Bierprofessor,50
+6,Braumeister,70
+7,Oberalki,90
+8,Beercules,100
+9,Hopfengott,120
+11,Biersommelier,150
+12,"Chuck Norris",9001

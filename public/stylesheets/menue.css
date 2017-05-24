@@ -1,0 +1,51 @@
+#augeswaehltesElement {
+    
+}
+
+.menueElement{
+    float: left;
+}
+
+.menueText{
+    float: left;
+    /*schiebt den Text in die Mitte:*/
+    transform: translate(7%,60%);
+    text-decoration: none;
+    font-family: sans-serif;
+    margin-right: 3%;
+}
+
+header{
+    list-style-type: none;
+    border-radius: 3px;
+    padding: 0.3%;
+
+    opacity: 0.93;
+    overflow: hidden;
+    background-color: #333;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+#logouttext{
+    float: right;
+    /*blendet logout text aus:*/
+    display: none;
+}
+
+#logoutbild{
+    /*logout bild soll rechts sein:*/
+    float: right;
+}
+
+a {
+    color:lightgrey;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: white;
+}
+

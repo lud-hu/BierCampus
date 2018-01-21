@@ -13,12 +13,12 @@ Goal of this project was to:
 - Get introduced to various technologies including the Play! Framework, MySQL, JavaFX, HTML/CSS and JavaScript.
 - Connect these technologies to a working Web Application with database communication.
 
-![login screen] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/login.JPG "Login Screen")
-![brauerei quizfrage] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/brauerei-quizfrage.JPG "Brewery Quiz Question")
-![brauerei zutat] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/brauerei-zutat.JPG "Brewery Ingredient")
-![bier gewinnt] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/biergewinnt.JPG "Bier Gewinnt")
-![freunde] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/freunde.JPG "Friends")
-![highscore] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/highscore.JPG "Highscore")
-![nachrichten] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/nachrichten.JPG "Messages")
-![profil] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/profil.JPG "Profile")
-![registrieren] (https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/registrieren.JPG "Register")
+![login screen](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/login.JPG "Login Screen")
+![brauerei quizfrage](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/brauerei-quizfrage.JPG "Brewery Quiz Question")
+![brauerei zutat](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/brauerei-zutat.JPG "Brewery Ingredient")
+![bier gewinnt](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/biergewinnt.JPG "Bier Gewinnt")
+![freunde](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/freunde.JPG "Friends")
+![highscore](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/highscore.JPG "Highscore")
+![nachrichten](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/nachrichten.JPG "Messages")
+![profil](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/profil.JPG "Profile")
+![registrieren](https://raw.githubusercontent.com/lud-hu/BierCampus/master/screenshots/registrieren.JPG "Register")
